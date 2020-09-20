@@ -215,7 +215,7 @@ split = sample.split(correlation_train_set$damage_grade, SplitRatio = 0.75)
 training_set = subset(correlation_train_set, split == TRUE)
 test_set = subset(correlation_train_set, split == FALSE)
 
-fit <- C5.0(training_set[-9], training_set$damage_grade, trials = 5)
+fit <- C5.0(training_set[-9], training_set$damage_grade, trials = 2)
 saveRDS(fit, file = "c5.0.rds")
 summary(fit)
 #plot(fit)
